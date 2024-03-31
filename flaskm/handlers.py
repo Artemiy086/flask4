@@ -10,6 +10,34 @@ def index():
     return render_template("index.html", title="Главная")
 
 
+@bp.route("/answer")
+def answer():
+    answer_d = {
+        "name": "man",
+        "last_name": "van",
+        "education": "ниже среднего",
+        "prof": "Строитель",
+        "male": "Мужчина",
+        "motivation": "Мечтал застрять на Марсе",
+        "stay": "True"
+    }
+    return render_template("auto_answer.html", title="answer", answer=answer_d)
+
+
+@bp.route("/auto_answer")
+def answer_auto():
+    answer_d = {
+        "name": "man",
+        "last_name": "van",
+        "education": "ниже среднего",
+        "prof": "Строитель",
+        "male": "Мужчина",
+        "motivation": "Мечтал застрять на Марсе",
+        "stay": "True"
+    }
+    return render_template("auto_answer.html", title="answer", answer=answer_d)
+
+
 @bp.route("/index/<title>")
 def index_title(title):
     return render_template("index.html", title=title)

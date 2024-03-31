@@ -1,0 +1,10 @@
+{% extends 'base.html' %}
+
+
+{% block main %}
+<div>
+{% for key, value in answer.items() %}
+  <h4>{{key}}: {{value}}</h4>
+{% endfor %}
+  </div>
+{% endblock main %}
