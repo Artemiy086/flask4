@@ -10,6 +10,11 @@ def index():
     return render_template("index.html", title="Главная")
 
 
+@bp.route("/index/<title>")
+def index_title(title):
+    return render_template("index.html", title=title)
+
+
 @bp.route("/training/<prof>")
 def training(prof):
     h4 = "Инженерные тренажеры"
